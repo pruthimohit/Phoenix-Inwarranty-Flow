@@ -5,7 +5,7 @@ on :
     branches : [main]
   workflow_dispatch:
   schedule:
-    - cron: 58 10 * * *    # 8am IST Everyday
+    - cron: 15 11 * * *    # 8am IST Everyday
     - cron: 00 14 * * *    # 7:30 pm IST everyday
     - cron: 00 06 * * 1-5  # 11:30 am IST Monday to Friday
    
@@ -36,7 +36,8 @@ jobs:
            -r cli,htmlextra
 
       - name : Newman Report
-        if: always
+        if: always()
+        uses: actions/upload-artifact@v4.6.2
         with:
           name: Newman Report
           path: newman/*.html
