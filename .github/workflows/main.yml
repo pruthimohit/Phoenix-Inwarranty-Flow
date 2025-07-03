@@ -5,7 +5,7 @@ on :
     branches : [main]
   workflow_dispatch:
   schedule:
-    - cron: 55 10 * * *    # 8am IST Everyday
+    - cron: 58 10 * * *    # 8am IST Everyday
     - cron: 00 14 * * *    # 7:30 pm IST everyday
     - cron: 00 06 * * 1-5  # 11:30 am IST Monday to Friday
    
@@ -21,7 +21,7 @@ jobs:
       - name: Install Nodejs and npm
         uses: actions/setup-node@v3.9.1
         with:
-          node-version: 22
+          node-version: '22'
 
       - name: Install Newman and Html-extra globally
         run: |
