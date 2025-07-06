@@ -11,7 +11,7 @@ on :
    
 jobs:
   run-postman-tests:
-     runs-on: EC2-Github-Runner
+     runs-on: ubuntu-latest
 
      steps:
   
