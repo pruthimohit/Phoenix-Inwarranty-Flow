@@ -50,8 +50,8 @@ You can run the project on your local system for that :
 2. Install Nodejs and NPM from https://nodejs.org/en
 3. Install Newman using ``` npm install -g newman ```
 4. Install Newman-reporter-htmlextra using ``` npm install -g newman-reporter-htmlextra ```
-5. Run the Newman Command:
-   ```newman run 'Inwarranty-flow Collection Copy.postman_collection.json' \
-           -e QA.postman_environment.json \
-           -r cli,htmlextra \
-           --reporter-htmlextra-export ./newman/index.html```
+5. Run the Newman Command: ```
+newman run 'Inwarranty-flow Collection Copy.postman_collection.json' \
+-e QA.postman_environment.json \
+-r cli,htmlextra \
+--reporter-htmlextra-export ./newman/index.html```
